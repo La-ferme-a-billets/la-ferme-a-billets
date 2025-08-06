@@ -5,67 +5,87 @@
   <title>La Ferme à Billets</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
-    *{margin:0;padding:0;box-sizing:border-box;}
-    body{font-family:Arial,sans-serif;background:#1d3727;color:#fffbe7;text-align:center;padding:1rem;}
-    img.logo{width:120px;margin:1rem auto;display:block;}
-    h1{font-size:2.5rem;margin-bottom:.5rem;}
-    p{font-size:1.2rem;margin-bottom:2rem;}
-    .buttons a{display:inline-block;padding:1rem 2rem;margin:.5rem;border-radius:5px;font-weight:bold;text-decoration:none;color:#fff;}
-    .btn-red{background:#ff4d4f;}
-    .btn-green{background:#4caf50;}
-    .testimonials{overflow:hidden;height:2.5rem;margin:2rem 0;}
-    .track{display:flex;animation:slide 12s linear infinite;}
-    .slide{flex:0 0 100%;padding:.5rem;}
-    @keyframes slide{
-      0%,25%{transform:translateX(0);}
-      33%,58%{transform:translateX(-100%);}
-      66%,91%{transform:translateX(-200%);}
-      100%{transform:translateX(0);}
-    }
-    .chat{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin:2rem 0;}
-    .screen{background:#fff;color:#333;width:45%;min-width:200px;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.2);text-align:left;}
-    .msg{padding:.5rem 1rem;margin:.2rem;border-radius:8px;max-width:80%;}
-    .user{background:#4caf50;color:#fff;margin-left:auto;}
-    .bot{background:#eee;color:#333;margin-right:auto;}
-    footer{margin:2rem 0;font-size:.9rem;}
-    footer a{color:#ccc;text-decoration:underline;margin:.2rem;}
-    section#mentions{color:#ccc;font-size:.9rem;margin-top:2rem;}
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:Arial,sans-serif;background:#efffed;color:#222;line-height:1.4}
+    header.hero{padding:4rem 1rem;background:#1d3727;color:#fff;text-align:center}
+    header.hero h1{font-size:2rem;margin-bottom:1rem}
+    header.hero p{font-size:1rem;max-width:600px;margin:0 auto}
+    section.choice{text-align:center;padding:2rem 1rem}
+    section.choice h2{font-size:1.5rem;margin-bottom:1rem}
+    .buttons{display:inline-flex;gap:1rem;flex-wrap:wrap;justify-content:center;margin-bottom:.5rem}
+    .btn{padding:1rem 2rem;border:none;border-radius:.5rem;font-size:1rem;cursor:pointer;color:#fff;text-decoration:none;display:inline-block}
+    .btn-red{background:#ff4d4f}
+    .btn-green{background:#4caf50}
+    .choice .subtext{font-size:.9rem;color:#555}
+    .services{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;padding:2rem 1rem}
+    .card{background:#fff;padding:1.5rem;border-radius:.75rem;box-shadow:0 4px 8px rgba(0,0,0,.1);max-width:300px;flex:1}
+    .card h3{margin-bottom:.5rem}
+    .card p{font-size:.95rem;color:#555}
+    section.cta{text-align:center;padding:2rem 1rem}
+    .btn-blue{background:#0077cc}
+    .btn-black{background:#000}
+    section.calendar{padding:2rem 1rem}
+    section.calendar h2{text-align:center;margin-bottom:1rem;font-size:1.5rem}
+    footer{text-align:center;padding:2rem 1rem;background:#222;color:#ccc}
+    footer a{color:#ccc;text-decoration:underline;margin:0 .5rem}
+    footer #mentions{margin-top:1rem;font-size:.85rem}
   </style>
 </head>
 <body>
-  <img src="https://via.placeholder.com/120.png?text=LOGO" alt="Logo" class="logo">
-  <h1>La Ferme à Billets</h1>
-  <p>Transforme le trading en machine à cash.</p>
-  <div class="buttons">
-    <a href="#" class="btn-red" onclick="alert('Tu choisis de rester pauvre !')">Rester pauvre</a>
-    <a href="https://calendly.com/la-ferme-a-billets/30min" class="btn-green" target="_blank">Rejoindre la ferme</a>
-  </div>
-  <div class="testimonials">
-    <div class="track">
-      <div class="slide">« Karim a validé 100K en 6 jours »</div>
-      <div class="slide">« Laura a retiré 1 200 € en 2e semaine »</div>
-      <div class="slide">« Bilal gère 3 comptes funded »</div>
+
+  <!-- Hero -->
+  <header class="hero">
+    <h1>Et toi… tu continues à survivre ou tu décides enfin de vivre ?</h1>
+    <p>Rester fauché est un choix. Tu peux continuer à bosser pour des miettes ou activer la machine à cash avec La Ferme à Billets.</p>
+  </header>
+
+  <!-- Choice -->
+  <section class="choice">
+    <h2>Fais ton choix :</h2>
+    <div class="buttons">
+      <button class="btn btn-red" onclick="alert('Tu restes dans la rat race !')">🚫 Rester dans la rat race</button>
+      <button class="btn btn-green" onclick="window.open('https://calendly.com/la-ferme-a-billets/30min','_blank')">✅ Rejoindre La Ferme à Billets 🤑</button>
     </div>
-  </div>
-  <div class="chat">
-    <div class="screen">
-      <div class="msg user">Salut, j’ai validé 100K en 4 jours grâce à vous !</div>
-      <div class="msg bot">Bravo ! Prêt à imprimer plus ?</div>
-      <div class="msg user">Lien en bio 😎</div>
-    </div>
-    <div class="screen">
-      <div class="msg user">1 500 € encaissés en 10 jours, merci !</div>
-      <div class="msg bot">Top, call ?</div>
-      <div class="msg user">Réservé sur Calendly !</div>
-    </div>
-  </div>
-  <footer>
-    <a href="#mentions">Mentions légales</a> •
-    <a href="https://t.me/+wIL4CbIi13swYmJk" target="_blank">Telegram</a>
-  </footer>
-  <section id="mentions">
-    <h2>Mentions légales</h2>
-    <p>Site édité à des fins de divertissement et d’information uniquement.</p>
+    <p class="subtext">Un seul des deux te rapproche de la liberté financière. L’autre t’y enchaîne.</p>
   </section>
+
+  <!-- Services -->
+  <section class="services">
+    <div class="card">
+      <h3>🔒 Accès aux Prop Firms</h3>
+      <p>Jusqu'à 200 000 $ de capital pour trader sans risquer ton propre argent.</p>
+    </div>
+    <div class="card">
+      <h3>🤖 Robots de validation</h3>
+      <p>Fais valider tes challenges pendant que tu dors. Performants, automatisés, sans stress.</p>
+    </div>
+    <div class="card">
+      <h3>🧠 Gestion de compte</h3>
+      <p>On gère tes comptes funded pour toi. Toi, tu encaisses les profits.</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <a href="https://t.me/+wIL4CbIi13swYmJk" class="btn btn-blue" target="_blank">💬 Rejoins notre Telegram</a>
+    <a href="https://calendly.com/la-ferme-a-billets/30min" class="btn btn-black" target="_blank">📅 Réserver un appel stratégique</a>
+  </section>
+
+  <!-- Calendly Embed -->
+  <section class="calendar">
+    <h2>Réserve ton appel avec nous</h2>
+    <div class="calendly-inline-widget" data-url="https://calendly.com/la-ferme-a-billets/30min" style="min-width:320px;height:630px;"></div>
+    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  </section>
+
+  <!-- Footer & Mentions -->
+  <footer>
+    <p><a href="#mentions">Mentions légales</a> • <a href="https://t.me/+wIL4CbIi13swYmJk" target="_blank">Telegram</a></p>
+    <section id="mentions">
+      <h3>Mentions légales</h3>
+      <p>Site édité à des fins de divertissement et d’information uniquement.</p>
+    </section>
+  </footer>
+
 </body>
 </html>
